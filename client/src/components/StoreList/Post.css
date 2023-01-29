@@ -1,9 +1,9 @@
 .itemImg{
-    height: 250px;
-    width: 250px;
+    height: 240px;
+    width: 240px;
     object-fit: cover;
 }
 .itemcart{
-    margin: 16px;
-
+    margin: 30px;
+    height: auto;
 }

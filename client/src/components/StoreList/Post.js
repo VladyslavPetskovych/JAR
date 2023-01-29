@@ -30,8 +30,8 @@ export default function Post({ posts, loading }) {
             
           }
         />
-        <div className="d-flex flex-row m-3 p-1 justify-content-between align-items-baseline">
-          <p className="m-1 fs-5 ">{item.itemname}</p>
+        <div className="d-flex flex-row  justify-content-between align-items-baseline">
+          <p className=" fs-5 ">{item.itemname}</p>
           <p className=" fs-5 text-muted">{item.itemprice}</p>
         </div>
         <p className=" m-2">{item.itemdesc}</p>
@@ -45,8 +45,8 @@ export default function Post({ posts, loading }) {
             </Button>
           ) : (
             <div
-              className="d-flex align-items-center flex-column"
-              style={{ gap: ".5rem", marginBottom: -41 }}
+              className="d-flex align-items-center flex-column itemCol"
+              style={{ gap: "16px", marginBottom: -48}}
             >
               <div
                 className="d-flex align-items-center justify-content-center flex-row "

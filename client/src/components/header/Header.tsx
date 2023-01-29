@@ -39,24 +39,7 @@ function Header() {
           <button className="contact">Контакт </button>
         </Link>
       </div>
-      <div className="header_goods d-flex justify-content-center ">
-        <button className="header_goods_buttons">Варення</button>
-        <button className="header_goods_buttons">Чай</button>
-        <button className="header_goods_buttons">Кава</button>
-        <button className="header_goods_buttons">Інші продукти</button>
-        <Button
-          className="header_goods_ss rounded-pill"
-          variant="outline-success"
-        >
-          Новинки
-        </Button>
-        <Button
-          className="header_goods_ss rounded-pill"
-          variant="outline-success"
-        >
-          Акції
-        </Button>
-      </div>
+
     </div>
   );
 }
