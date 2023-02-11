@@ -8,11 +8,11 @@ import Footer from "../components/footer/Footer";
 
 export default function Home() {
   return (
-    <div className="mt-4 wrapper_home">
+    <div className=" wrapper_home">
       <h1 className=" home_title d-flex justify-content-center align-items-center ">
         Новини & Огляд
       </h1>
-      <Container className="recipe d-flex mt-7 m-5">
+      <Container className="recipe d-flex m-5">
         <img className="klop fluid mt-5" src={klop} alt="" />
         <Container className="flex-column d-flex m-5 ">
           <h2 className="mb-1">

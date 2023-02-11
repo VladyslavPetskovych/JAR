@@ -52,14 +52,14 @@ export default function () {
         </Button>
       </div>
       <div className="mainlist-container">
-        <h4 className="mainlist-header-text">СПИСОК ТОВАРІВ</h4>
+        <h4 className="mainlist-header-text">☕СПИСОК ТОВАРІВ🍭</h4>
         <div className="List">
           <div className="mainlist__searchlabel">
             <div className="SearchBar">
               <input type="text" placeholder="Введіть назву товару:"></input>
               <button className="SearchBar_BtnFind">🔎</button>
             </div>
-            <div className="container  ">
+            <div className="container">
               <Pagination
                 postPerPage={postPerPage}
                 totalPost={posts.length}
