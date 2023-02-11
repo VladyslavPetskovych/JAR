@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "react-bootstrap";
-import { isTemplateMiddle } from "typescript";
+
 import { useShoppingCart } from "../../context/shoppingCartContext";
 import "./Post.css";
 
@@ -22,8 +22,9 @@ export default function Post({ posts, loading }) {
   let Show1render = posts.map((item) => {
     const quantity = getItemQuantity(item.id);
     return (
-      <div className="d-flex flex-column itemcart" key= {item.name}>
+      <div className="d-flex flex-column itemcart" key= {item.id}>
         <img
+        key= {item.id}
           className="itemImg"
           src={
             "http://localhost:8080/" + item.name 
@@ -40,6 +41,7 @@ export default function Post({ posts, loading }) {
             <Button
               className="w-100"
               onClick={() => { increaseCartQuantity(item.id)}}
+              key= {item.id}
             >
               + Додати товар
             </Button>
