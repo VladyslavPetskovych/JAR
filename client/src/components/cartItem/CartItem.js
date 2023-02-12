@@ -1,7 +1,7 @@
 import Axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useShoppingCart } from "../../context/shoppingCartContext";
-import { Stack } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 
 export default function ({ id, quantity }) {
   const { removeFromCart } = useShoppingCart();
@@ -26,12 +26,42 @@ export default function ({ id, quantity }) {
   if (item == null) return null;
 
   return (
-    <Stack>
+    <div className="d-flex flex-row">
       <img
         key={item.id}
-        className="itemImg"
+        className="itemImg "
+        style={{ width: "125px", height: "95px", objectFit: "cover" }}
         src={"http://localhost:8080/" + item.name}
       />
-    </Stack>
+      <div className="me-auto mt-3">
+        <p className=" fw-bold">
+          {item.itemname}
+          {quantity > 1 && (
+            <span
+              className=" text-muted"
+              style={{ fontSize: ".7rem" }}
+            >{` x${quantity}`}</span>
+          )}
+        </p>
+        <p className="text-muted ">Ціна: {item.itemprice}грн</p>
+      </div>
+
+      <div className="me-auto mt-3">{`${item.itemprice * quantity}грн`}</div>
+      <Button
+        className="h-50 mt-3"
+        size="sm"
+        variant="outline-danger"
+        onClick={() => removeFromCart(item.id)}
+      >
+        &times;
+      </Button>
+
+      {/* <div className="ms-auto fw-bold fs-5">
+        Total  {posts.reduce((total, cartItem) => {const item = posts.find(i => i.id === cartItem.id)
+        {console.log(quantity)}
+        return total + (item?.itemprice || 0) * quantity},0)}
+      </div> */}
+    </div>
   );
 }
+

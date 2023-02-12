@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { useShoppingCart } from "../../context/shoppingCartContext";
 
