@@ -34,7 +34,7 @@ app.get('/api/get', (req, res) => {
   const sqlInsert = "SELECT * FROM images ";
     dbb.query(sqlInsert, (err, result) => {
       res.send(result);
-      console.log(result);
+      //console.log(result);
     });
 })
 // app.get("/api/get", (req, res) => {

@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
-import UserOrder from "../pages/UserOrder";
+import UserOrder from "../components/user/UserOrderOffCanvas";
 
 type ShoppingCartProviderProps = {
   children: ReactNode;

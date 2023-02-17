@@ -1,9 +1,7 @@
-export default function User() {
-  return <div>
-    <h1> gggggggg </h1>
-    <h1> gggggggg </h1>
-    <h1> gggggggg </h1>
-    <h1> gggggggg </h1>
+import UserPayment from "../components/user/UserPaymentPage";
 
-    </div>;
+export default function User() {
+  return (<>
+    <UserPayment></UserPayment>
+  </>);
 }

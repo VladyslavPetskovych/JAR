@@ -30,8 +30,6 @@ function Footer() {
                         <div className="single-cta">
                             <i className="far fa-envelope-open"></i>
                             <div className="cta-text">
-                                <h4>Наш СЕО</h4>
-                                <span>dimapopov@gmail.com</span>
                                 <h4>Наш Менеджер</h4>
                                 <span>vladpetskovych@gmail.com</span>
                             </div>

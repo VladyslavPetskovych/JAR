@@ -1,7 +1,7 @@
 
 /* header goods */
 .header_goods{
-    height: 55px;
+    padding-top: 60px;
     width: auto;
     border: 1px solid #a2a2a0;
 }
@@ -135,7 +135,7 @@
 @media(width <= 660px){
     .header_goods{
         flex-direction: column;
-        margin-top: 20px;
+        padding-top: 70px;
         height: auto;
     }
     .header_goods_buttons{
