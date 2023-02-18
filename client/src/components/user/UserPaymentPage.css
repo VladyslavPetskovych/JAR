@@ -1,0 +1,12 @@
+.User__wraper{
+    padding: 100px;
+    min-height: 100vh;
+    height: 100%;
+    background-image: linear-gradient(-180deg, rgba(205, 253, 255, 0.8), rgb(42, 181, 211,0.5));
+    background-size: cover;
+
+}
+.User__items{
+    display: flex;
+    flex-wrap: wrap;
+}

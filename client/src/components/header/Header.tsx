@@ -1,7 +1,6 @@
 import React from "react";
 import "./Header.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { useShoppingCart } from "../../context/shoppingCartContext";
 
@@ -20,9 +19,7 @@ function Header() {
           </button>
         </Link>
         <Link to="/user">
-
-          <button className="header_buttons position-relative"
-          onClick={openCart}>
+          <button className="header_buttons position-relative">
             Замовлення{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"

@@ -1,0 +1,7 @@
+.CartItem{
+    margin: 30px;
+    width: 25%;
+    min-width: 350px;
+    background-color: white;
+    border-radius: 30px;
+}

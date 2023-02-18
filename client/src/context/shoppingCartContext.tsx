@@ -1,6 +1,5 @@
 import { createContext, ReactNode, useContext, useState } from "react";
-import User from "../pages/User";
-
+import UserOrder from "../components/user/UserOrderOffCanvas";
 
 type ShoppingCartProviderProps = {
   children: ReactNode;
@@ -30,23 +29,30 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
   const [isOpen, setIsOpen] = useState(false);
 
-  const cartQuantity = cartItems.reduce((quantity, item) => item.quantity + quantity, 0)
+  const cartQuantity = cartItems.reduce(
+    (quantity, item) => item.quantity + quantity,
+    0
+  );
 
-  const openCart = () => {setIsOpen(true)}
-  const closeCart = () => {setIsOpen(false)}
+  const openCart = () => {
+    setIsOpen(true);
+  };
+  const closeCart = () => {
+    setIsOpen(false);
+  };
   function getItemQuantity(id: number) {
-    return cartItems.find((item) => item.id === id)?.quantity || 0
-  } 
+    return cartItems.find((item) => item.id === id)?.quantity || 0;
+  }
   function increaseCartQuantity(id: number) {
     setCartItems((currItems) => {
       if (currItems.find((item) => item.id === id) == null) {
-        return [...currItems, {id, quantity: 1 }]
+        return [...currItems, { id, quantity: 1 }];
       } else {
         return currItems.map((item) => {
           if (item.id === id) {
-            return { ...item, quantity: item.quantity + 1 }
+            return { ...item, quantity: item.quantity + 1 };
           } else {
-            return item
+            return item;
           }
         });
       }
@@ -86,7 +92,7 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
       }}
     >
       {children}
-      <User isOpen={isOpen} />
+      <UserOrder isOpen={isOpen} />
     </ShoppingCartContext.Provider>
   );
 }
