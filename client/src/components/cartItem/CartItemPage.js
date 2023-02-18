@@ -42,7 +42,7 @@ export default function CartItemPage({ id, quantity }) {
         <p className="text-muted ">Ціна: {item.itemprice}грн</p>
       </div>
 
-      <div className=" d-flex m-2 mt-3">{`${item.itemprice * quantity}грн`}</div>
+      <div className=" d-flex m-5 mt-3">{`${item.itemprice * quantity}грн`}</div>
       <div className=" d-flex align-items-center">
       <Button
         className="h-100"
