@@ -1,7 +1,7 @@
-import UserPayment from "../components/user/UserPaymentPage";
+import UserPaymentPage from "../components/user/UserPaymentPage";
 
 export default function User() {
   return (<>
-    <UserPayment></UserPayment>
+    <UserPaymentPage></UserPaymentPage>
   </>);
 }
